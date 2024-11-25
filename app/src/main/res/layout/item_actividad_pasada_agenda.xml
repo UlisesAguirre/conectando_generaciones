@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#F0F0F0"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="7dp"
+        android:background="#F0F0F0"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="7dp"
+            android:background="#F0F0F0"
+            android:layout_marginBottom="8dp">
+
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre: Teatro"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tvFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha: 25/09/2024"
+                android:textSize="14sp"
+                android:textColor="#555555" />
+
+            <TextView
+                android:id="@+id/tvOrganizador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Organizador: Gonzalo Martínez"
+                android:textSize="14sp"
+                android:textColor="#555555" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="#F0F0F0"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estado: realizada"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="14dp"
+        android:backgroundTint="#717171">
+
+        <TextView
+            android:id="@+id/tvCalificacion"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:text="Calificacion:"
+            android:textSize="17sp"
+            android:textColor="#555555" />
+
+
+        <RatingBar
+            android:id="@+id/rating_bar_calificacion"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:isIndicator="true"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="14dp"
+        android:paddingTop="10dp"
+        android:backgroundTint="#717171">
+
+        <TextView
+            android:id="@+id/tv_comentario_title"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Comentario :"
+            android:textSize="17sp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/tv_comentario"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Comentario"
+            android:textSize="17sp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+
+
+        <Button
+            android:id="@+id/btnNoCalificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No calificar"
+            android:backgroundTint="#FF6347"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="60dp"/>
+
+        <Button
+            android:id="@+id/btnCalificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calificar"
+            android:backgroundTint="#7AB648"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+</LinearLayout>

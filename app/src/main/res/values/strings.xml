@@ -1,0 +1,129 @@
+<resources>
+    <string name="app_name">Grupo2_ProyectoFinal</string>
+
+
+    <string name="txt_mensaje_ppal_p1">Un</string>
+    <string name="txt_mensaje_ppal_p2">\u00A0 pequeño gesto</string>
+    <string name="txt_mensaje_ppal_p3">\u00A0 puede</string>
+    <string name="txt_mensaje_ppal_p4">cambiar un</string>
+    <string name="txt_mensaje_ppal_p5">\u00A0 día</string>
+    <string name="txt_mensaje2_ppal_p1">Una conexión</string>
+    <string name="txt_mensaje2_ppal_p2">puede cambiar\u00A0</string>
+    <string name="txt_mensaje2_ppal_p3">una vida</string>
+
+    <!-- Cadenas para MiPerfilActivity -->
+    <string name="mi_perfil_titulo">MI PERFIL</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="nombre_usuario">Juan Perez</string>
+    <string name="email_usuario">Email: </string>
+    <string name="nacionalidad">Nacionalidad: </string>
+    <string name="sexo">Sexo: </string>
+    <string name="fecha_nacimiento">Fecha de Nacimiento: </string>
+    <string name="edad">Edad: </string>
+    <string name="provincia">Provincia: </string>
+    <string name="localidad">Localidad: </string>
+    <string name="direccion">Dirección: </string>
+    <string name="telefono">Teléfono: </string>
+
+    <!-- Cadenas para Notificaciones -->
+    <string name="notificaciones_titulo">Notificaciones</string>
+    <string name="notificacion_1">Primera Notificación</string>
+    <string name="notificacion_2">Segunda Notificación</string>
+    <string name="notificacion_3">Tercera Notificación</string>
+    <string name="anterior">Anterior</string>
+    <string name="siguiente">Siguiente</string>
+
+    <!-- Cadenas para CoordinarActividadFragment -->
+    <string name="coordinar_actividad_titulo">Coordinar Actividad</string>
+    <string name="selecciona_actividad">Selecciona una Actividad</string>
+    <string name="selecciona_fecha">Selecciona la Fecha</string>
+    <string name="selecciona_hora">Selecciona la Hora</string>
+    <string name="usuario_seleccionado">Usuario Seleccionado</string>
+    <string name="nombre_ca">Nombre: </string>
+    <string name="email">Email: </string>
+    <string name="sexo_ca">Sexo: </string>
+    <string name="actividades_preferidas_1">Actividades Preferidas</string>
+    <string name="verificar_disponibilidad">Verificar Disponibilidad</string>
+    <string name="enviar_solicitud">Enviar Solicitud</string>
+
+    <!-- Títulos y textos de la actividad Perfiles Compatibles -->
+    <string name="perfiles_titulo">Perfiles Compatibles</string>
+    <string name="actividades_preferidas">Actividades Preferidas: Ejemplo de Actividad</string>
+    <string name="coordinar">Coordinar Actividad</string>
+    <string name="mas">+</string>
+    <string name="lunes">Lunes</string>
+    <string name="martes">Martes</string>
+    <string name="miercoles">Miercoles</string>
+    <string name="viernes">Viernes</string>
+    <string name="sabado">Sabado</string>
+    <string name="domingo">Domingo</string>
+    <string name="franja_horaria_disponible">Franja Horaria Disponible</string>
+    <string name="jueves">Jueves</string>
+    <string name="aire_libre">Aire Libre</string>
+    <string name="deporte">Deporte</string>
+    <string name="culturales">Culturales</string>
+    <string name="arte">Arte</string>
+    <string name="musica">Música</string>
+    <string name="lectura">Lectura</string>
+    <string name="zona">Zona</string>
+    <string name="intereses_bienvenida">Para poder utilizar la aplicación, debemos conocer tus intereses. De esta forma, podremos encontrar los usuarios con los que tienes mejor compatibilidad</string>
+    <string name="dias_disponibles">Días Disponibles</string>
+    <string name="horarios_disponibles">Horarios Disponibles</string>
+    <string name="manana">Mañana</string>
+    <string name="tarde">Tarde</string>
+    <string name="noche">Noche</string>
+    <string name="actividades_preferidas_noejemplo">Actividades preferidas</string>
+    <string name="cuenta_con_transporte_propio">¿Cuenta con transporte propio?</string>
+    <string name="si">Sí</string>
+    <string name="no">No</string>
+    <string name="iniciar">INICIAR</string>
+    <string name="registrarse">REGISTRARSE</string>
+    <string name="repetir_contrasena">Repetir contraseña</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="correo_electronico">Correo electrónico</string>
+    <string name="domicilio">Domicilio</string>
+    <string name="localidad_regis">Localidad</string>
+    <string name="provincia_regis">Provincia</string>
+    <string name="nro_de_telefono">Nro de Teléfono</string>
+    <string name="institucion">Institución</string>
+    <string name="fecha_de_nacimiento">Fecha de Nacimiento</string>
+    <string name="sexo_regis">Sexo</string>
+    <string name="nacionalidad_regis">Nacionalidad</string>
+    <string name="nro_de_documento">Nro de Documento</string>
+    <string name="apellido">Apellido</string>
+    <string name="nombre">Nombre</string>
+    <string name="adulto_mayor">Adulto mayor</string>
+    <string name="regisAdulto_bienvenida">Complete los siguientes campos para finalizar su registro</string>
+    <string name="registrarse_minus">Registrarse</string>
+    <string name="selecPerfil_bienvenida">Selecciona tu perfil para empezar a formar parte de esta comunidad</string>
+    <string name="voluntario">Voluntario</string>
+
+    <!-- Arrays temporales para los desplegables -->
+    <string-array name="nacionalidades">
+        <item>Argentina</item>
+        <item>Brasil</item>
+        <item>Chile</item>
+        <item>Uruguay</item>
+    </string-array>
+
+    <string-array name="sexos">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="provincias">
+        <item>Buenos Aires</item>
+        <item>Córdoba</item>
+        <item>Santa Fe</item>
+    </string-array>
+
+    <string-array name="localidades">
+        <item>Capital Federal</item>
+        <item>La Plata</item>
+        <item>Rosario</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="modificar_intereses">Modificar intereses</string>
+</resources>

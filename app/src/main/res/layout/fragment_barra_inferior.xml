@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#66CDAA"
+    android:padding="4dp">
+
+    <ImageButton
+        android:id="@+id/btnBuscarPerfiles"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/perfiles"
+        android:contentDescription="Buscar Perfiles"
+        android:scaleType="fitCenter"
+        android:layout_margin="4dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="40dp"
+        android:maxHeight="40dp"/>
+
+    <ImageButton
+        android:id="@+id/btnNotificaciones"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/notificaciones"
+        android:contentDescription="Notificaciones"
+        android:scaleType="fitCenter"
+        android:layout_margin="4dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="40dp"
+        android:maxHeight="40dp"/>
+
+    <ImageButton
+        android:id="@+id/btnMiAgenda"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/calendario"
+        android:contentDescription="Mi Agenda"
+        android:scaleType="fitCenter"
+        android:layout_margin="4dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="40dp"
+        android:maxHeight="40dp"/>
+
+    <ImageButton
+        android:id="@+id/btnInformes"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/informes"
+        android:contentDescription="Informes"
+        android:scaleType="fitCenter"
+        android:layout_margin="4dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="40dp"
+        android:maxHeight="40dp"/>
+
+    <ImageButton
+        android:id="@+id/btnMiPerfil"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/usuario"
+        android:contentDescription="Mi Perfil"
+        android:scaleType="fitCenter"
+        android:layout_margin="4dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="40dp"
+        android:maxHeight="40dp"/>
+</LinearLayout>

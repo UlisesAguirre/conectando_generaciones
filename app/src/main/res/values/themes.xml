@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TPINT_Grupo2" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/verde_tb</item>
+
+    </style>
+    <style name="TemaDialogos" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/verde_tb</item>
+        <item name="background">@drawable/dialogo_borde_redondeado</item>
+        <item name="android:windowBackground">@drawable/dialogo_borde_redondeado</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/btnOk</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/btnCancel</item>
+    </style>
+
+    <style name="btnOk" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+
+    </style>
+
+    <style name="btnCancel" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+
+
+
+
+    <style name="Theme.TPINT_Grupo2" parent="Base.Theme.TPINT_Grupo2" />
+</resources>

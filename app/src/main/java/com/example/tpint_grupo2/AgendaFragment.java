@@ -1,0 +1,132 @@
+package com.example.tpint_grupo2;
+
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link AgendaFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class AgendaFragment extends Fragment {
+
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+
+    public AgendaFragment() {
+        // Required empty public constructor
+    }
+
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment AgendaFragment.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static AgendaFragment newInstance(String param1, String param2) {
+        AgendaFragment fragment = new AgendaFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_agenda, container, false);
+
+
+        Button btnMisSolicitudes = view.findViewById(R.id.btnMisSolicitudes);
+        Button btnMisActividades = view.findViewById(R.id.btnMisActividades);
+        Button btnCalificarActividades = view.findViewById(R.id.btnCalificarActividades);
+        Button btnHistorialActividades = view.findViewById(R.id.btnhistorialactividades);
+
+        // Funcionalidad botones menu agenda
+        btnMisSolicitudes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MisSolicitudesFragment objMisSolicitudes_frag = new MisSolicitudesFragment();
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.fragment_menu_principal_container, objMisSolicitudes_frag);
+                transaction.addToBackStack(null);
+                transaction.commit();
+
+            }
+
+        } );
+
+        btnMisActividades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                FragmentMisActividades objMisActividades_frag = new FragmentMisActividades();
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_menu_principal_container, objMisActividades_frag);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+
+        } );
+
+        btnCalificarActividades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                ActividadesSinCalificarFragment objActividadessincalificar_frag = new ActividadesSinCalificarFragment();
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_menu_principal_container, objActividadessincalificar_frag);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+
+        } );
+
+        btnHistorialActividades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                HistorialActividadesFragment objHistorialActividades_frag = new HistorialActividadesFragment();
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_menu_principal_container, objHistorialActividades_frag);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+
+        } );
+
+
+        return view;
+    }
+}

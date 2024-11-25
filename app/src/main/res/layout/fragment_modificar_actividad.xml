@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentModificarActividad">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".FragmentModificarActividad">
+
+        <TextView
+            android:id="@+id/text_horarios2"
+            android:layout_width="328dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/gris_claro"
+            android:padding="8dp"
+            android:text="@string/horarios_disponibles"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+            tools:text="Horarios" />
+
+        <Button
+            android:id="@+id/btn_volver_actividad"
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#ADADAD"
+            android:text="Volver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.885"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hora_fin" />
+
+        <Button
+            android:id="@+id/btn_modificar_actividad"
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="72dp"
+            android:backgroundTint="#02AE01"
+            android:text="Modificar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.009"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hora_fin" />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modificar Actividad"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/line_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titulo" />
+
+        <EditText
+            android:id="@+id/edt_nombre_actividad"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="Nombre de la actividad"
+            android:inputType="text"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_divider" />
+
+        <TextView
+            android:id="@+id/tv_localidad"
+            android:layout_width="328dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/gris_claro"
+            android:text="Localidad"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_nombre_actividad" />
+
+        <TextView
+            android:id="@+id/tv_categoria"
+            android:layout_width="328dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/gris_claro"
+            android:text="Categoría"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_nombre_actividad" />
+
+        <TextView
+            android:id="@+id/tv_actual_localidad"
+            android:layout_width="164dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="104dp"
+            android:text="Actual"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.088"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_categoria" />
+
+        <TextView
+            android:id="@+id/tv_actual_categoria"
+            android:layout_width="164dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:text="Actual"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.088"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_categoria" />
+
+        <Spinner
+            android:id="@+id/spin_localidad"
+            android:layout_width="164dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_localidad" />
+
+        <Spinner
+            android:id="@+id/spin_categoria"
+            android:layout_width="164dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_categoria" />
+
+        <TextView
+            android:id="@+id/tv_dias"
+            android:layout_width="328dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="104dp"
+            android:background="@color/gris_claro"
+            android:text="Días"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_actual_categoria" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="320dp"
+            android:layout_height="276dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dias">
+
+            <RadioButton
+                android:id="@+id/rb_libre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Libre" />
+
+            <RadioButton
+                android:id="@+id/rb_dias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar Días:" />
+
+            <GridLayout
+                android:id="@+id/dias_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="3"
+                android:padding="8dp">
+
+                <CheckBox
+                    android:id="@+id/chk_lunes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:text="@string/lunes" />
+
+                <CheckBox
+                    android:id="@+id/chk_martes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:text="@string/martes" />
+
+                <CheckBox
+                    android:id="@+id/chk_miercoles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:text="@string/miercoles" />
+
+                <CheckBox
+                    android:id="@+id/chk_jueves"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:text="@string/jueves" />
+
+                <CheckBox
+                    android:id="@+id/chk_viernes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:text="@string/viernes" />
+
+                <CheckBox
+                    android:id="@+id/chk_sabado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:text="@string/sabado" />
+
+                <CheckBox
+                    android:id="@+id/chk_domingo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:text="@string/domingo" />
+            </GridLayout>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_hora_inicio"
+            android:layout_width="66dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="55dp"
+            android:text="Inicio"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupHorario" />
+
+        <TimePicker
+            android:id="@+id/hora_inicio"
+            android:layout_width="257dp"
+            android:layout_height="137dp"
+            android:layout_marginEnd="8dp"
+            android:timePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupHorario" />
+
+        <TextView
+            android:id="@+id/tv_hora_fin"
+            android:layout_width="66dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="120dp"
+            android:text="Fin"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hora_inicio" />
+
+        <TimePicker
+            android:id="@+id/hora_fin"
+            android:layout_width="257dp"
+            android:layout_height="137dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:timePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hora_inicio" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupHorario"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_horarios2">
+
+            <RadioButton
+                android:id="@+id/rb_libre_horario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Libre" />
+
+            <RadioButton
+                android:id="@+id/rb_horario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar Horario:" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

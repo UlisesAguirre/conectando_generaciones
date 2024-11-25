@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SeleccionarPerfilActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_toolbar_container"
+        android:name="com.example.tpint_grupo2.FragmentBarraSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_msj_ppal_p1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/registrarse"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/fragment_toolbar_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_msj2_ppal_p3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/selecPerfil_bienvenida"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/txt_msj_ppal_p1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="175dp"
+        android:layout_height="275dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/voluntario"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_msj2_ppal_p3"
+        app:srcCompat="@mipmap/voluntario" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="175dp"
+        android:layout_height="275dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/adulto_mayor"
+        app:layout_constraintStart_toEndOf="@id/imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_msj2_ppal_p3"
+        app:srcCompat="@mipmap/adulto" />
+
+    <Button
+        android:id="@+id/btn_iniciarSesion"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#02AE01"
+        android:text="@string/siguiente"
+        app:layout_constraintTop_toBottomOf="@id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

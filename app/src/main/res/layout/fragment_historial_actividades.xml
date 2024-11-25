@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Título de la pantalla -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Historial de Actividades"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+
+    <!-- Texto para mostrar cuando no hay historial de actividades -->
+    <TextView
+        android:id="@+id/tv_sin_historial_actividades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:text="No posee historial de actividades" />
+
+    <!-- RecyclerView para mostrar el historial de actividades -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHistorialActividades"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

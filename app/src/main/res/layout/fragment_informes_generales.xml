@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentInformesGenerales">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_titulo_menuInf_gen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informes Generales"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="350dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_titulo_menuInf_gen" />
+
+            <Spinner
+                android:id="@+id/sp_cat_informe_gen"
+                android:layout_width="233dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_fecha_fin_gen" />
+
+            <EditText
+                android:id="@+id/et_fecha_inicio_gen"
+                android:layout_width="139dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="4dp"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="YYYY-MM-DD"
+                android:inputType="date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.115"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_periodo" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="350dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="64dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_aplicar_filtros_gen" />
+
+            <TextView
+                android:id="@+id/txt_periodo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:text="Período:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_titulo_menuInf_gen" />
+
+            <TextView
+                android:id="@+id/txt_hasta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:text="hasta:"
+                app:layout_constraintEnd_toStartOf="@+id/et_fecha_fin_gen"
+                app:layout_constraintHorizontal_bias="0.468"
+                app:layout_constraintStart_toEndOf="@+id/et_fecha_inicio_gen"
+                app:layout_constraintTop_toTopOf="@+id/et_fecha_inicio_gen" />
+
+            <EditText
+                android:id="@+id/et_fecha_fin_gen"
+                android:layout_width="139dp"
+                android:layout_height="43dp"
+                android:layout_marginEnd="28dp"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="YYYY-MM-DD"
+                android:inputType="date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/et_fecha_inicio_gen" />
+
+            <Button
+                android:id="@+id/btn_aplicar_filtros_gen"
+                android:layout_width="177dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/verde_tb"
+                android:text="Aplicar Filtros"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.38"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sp_cat_informe_gen" />
+
+            <ImageButton
+                android:id="@+id/btn_borrarFiltros_gen"
+                android:layout_width="44dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="44dp"
+                android:background="@drawable/borde_redondeado"
+                android:backgroundTint="#803030"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.21"
+                app:layout_constraintStart_toEndOf="@+id/btn_aplicar_filtros_gen"
+                app:layout_constraintTop_toBottomOf="@+id/sp_cat_informe_gen"
+                app:tint="@color/white" />
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:dividerPadding="12dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_actividad_filtrada_gen">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/gris_claro"
+                    android:minHeight="80dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/txt_cant_inscrip_gen"
+                        android:layout_width="192dp"
+                        android:layout_height="66dp"
+                        android:layout_gravity="center|left"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Cantidad de Inscripciones"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/txt_value_cant_inscrip_gen"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_weight="2"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_horizontal"
+                        android:text="-"
+                        android:textAlignment="center"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:background="@color/gris_claro"
+                    android:minHeight="80dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp">
+
+                    <TextView
+                        android:id="@+id/txt_promedio_gen"
+                        android:layout_width="167dp"
+                        android:layout_height="66dp"
+                        android:layout_gravity="center|left"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Promedio de Calificaciones"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/txt_value_promedio_gen"
+                        android:layout_width="101dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_weight="2"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_horizontal"
+                        android:text="-"
+                        android:textAlignment="center"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tableLayout2"
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/gris_claro"
+                    android:foregroundGravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:textAlignment="center">
+
+                    <RatingBar
+                        android:id="@+id/ratingBar_promedio"
+                        android:layout_height="match_parent"
+                        android:max="5"
+                        android:numStars="5" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/txt_actividad_filtrada_gen"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="35dp"
+                android:hint="Cargando..."
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/btn_aplicar_filtros_gen"
+                tools:layout_editor_absoluteX="-16dp" />
+
+            <TextView
+                android:id="@+id/txt_detalles_filtros_gen"
+                android:layout_width="349dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="80dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Informe sobre todas las actividades."
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.516"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

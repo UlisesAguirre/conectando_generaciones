@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titulo_calificar_actividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calificar Actividad"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/nombre_actividad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:minHeight="48dp"
+        android:textSize="20dp"
+        android:text="Nombre: Merienda" />
+
+    <TextView
+        android:id="@+id/fecha_actividad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha"
+        android:textSize="20dp"
+        android:minHeight="48dp"
+        android:text="Fecha: 15/09/2024" />
+
+    <TextView
+        android:id="@+id/organizar_actividad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:minHeight="48dp"
+        android:text="Organizador: Pepe" />
+
+    <!-- Clasificación de estrellas -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrese su clasificación:"
+        android:textSize="20dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp" />
+
+    <RatingBar
+        android:id="@+id/rating_bar_calificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <EditText
+        android:id="@+id/comentarios_actividad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Comentarios"
+        android:inputType="textMultiLine"
+        android:minLines="4"
+        android:gravity="top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="16dp">
+
+        <Button
+            android:id="@+id/btn_calificar_calificar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="100dp"
+            android:text="CALIFICAR"
+            android:backgroundTint="#7AB648"
+            android:layout_marginRight="25dp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

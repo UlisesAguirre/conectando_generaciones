@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".RegistrarseAdultoActivity">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_toolbar_container"
+            android:name="com.example.tpint_grupo2.FragmentBarraSuperior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/registrarse_minus"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_toolbar_container" />
+
+        <TextView
+            android:id="@+id/instruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/regisAdulto_bienvenida"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <TextView
+            android:id="@+id/section_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#E6E6A6"
+            android:padding="8dp"
+            android:text="@string/adulto_mayor"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/instruction" />
+
+        <EditText
+            android:id="@+id/et_nombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:hint="@string/nombre"
+            android:inputType="text|textPersonName|textCapWords"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/section_title" />
+
+        <EditText
+            android:id="@+id/et_apellido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:hint="@string/apellido"
+            android:inputType="text|textPersonName|textCapWords"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_nombre" />
+
+        <EditText
+            android:id="@+id/et_documento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:hint="@string/nro_de_documento"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_apellido" />
+
+        <TextView
+            android:id="@+id/label_nacionalidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/nacionalidad_regis"
+            app:layout_constraintEnd_toEndOf="@id/sp_nacionalidad"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/sp_nacionalidad"
+            app:layout_constraintTop_toBottomOf="@id/et_documento" />
+
+        <Spinner
+            android:id="@+id/sp_nacionalidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/sp_sexo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_nacionalidad"
+            android:layout_marginHorizontal="16dp"
+            android:entries="@array/nacionalidades" />
+
+        <TextView
+            android:id="@+id/label_sexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/sexo_regis"
+            app:layout_constraintEnd_toEndOf="@id/sp_sexo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/sp_sexo"
+            app:layout_constraintTop_toBottomOf="@id/et_documento" />
+
+        <Spinner
+            android:id="@+id/sp_sexo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sp_nacionalidad"
+            app:layout_constraintTop_toBottomOf="@id/label_sexo"
+            android:layout_marginHorizontal="16dp"
+            android:entries="@array/sexos" />
+
+        <EditText
+            android:id="@+id/et_fecha_nacimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Seleccionar fecha"
+            android:focusable="false"
+            app:layout_constraintTop_toBottomOf="@id/sp_sexo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="16dp" />
+
+        <EditText
+            android:id="@+id/et_institucion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:hint="@string/institucion"
+            android:inputType="text|textCapWords"
+            app:layout_constraintEnd_toStartOf="@+id/et_telefono"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_fecha_nacimiento" />
+
+        <EditText
+            android:id="@+id/et_telefono"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:hint="@string/nro_de_telefono"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/et_institucion"
+            app:layout_constraintTop_toBottomOf="@id/et_fecha_nacimiento" />
+
+        <TextView
+            android:id="@+id/label_provincia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/provincia_regis"
+            android:autofillHints=""
+            app:layout_constraintEnd_toEndOf="@id/sp_provincia"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/sp_provincia"
+            app:layout_constraintTop_toBottomOf="@id/et_telefono" />
+
+        <Spinner
+            android:id="@+id/sp_provincia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/sp_localidad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_provincia"
+            android:layout_marginHorizontal="16dp"
+            android:entries="@array/provincias" />
+
+        <TextView
+            android:id="@+id/label_localidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/localidad_regis"
+            app:layout_constraintEnd_toEndOf="@id/sp_localidad"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/sp_localidad"
+            app:layout_constraintTop_toBottomOf="@id/et_telefono" />
+
+        <Spinner
+            android:id="@+id/sp_localidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sp_provincia"
+            app:layout_constraintTop_toBottomOf="@id/label_localidad"
+            android:layout_marginHorizontal="16dp"
+            android:entries="@array/localidades" />
+
+        <EditText
+            android:id="@+id/et_domicilio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:hint="@string/domicilio"
+            android:inputType="text|textCapWords"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sp_localidad" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/correo_electronico"
+            android:inputType="textEmailAddress"
+            android:autofillHints=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_domicilio"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="16dp" />
+
+        <EditText
+            android:id="@+id/et_contrasena"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/contrasena"
+            android:inputType="textPassword"
+            android:autofillHints=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_email"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="16dp" />
+
+        <EditText
+            android:id="@+id/et_repetir_contrasena"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/repetir_contrasena"
+            android:inputType="textPassword"
+            android:autofillHints=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_contrasena"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="16dp" />
+
+        <Button
+            android:id="@+id/btn_confirmar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#02AE01"
+            android:text="@string/registrarse"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_repetir_contrasena" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
